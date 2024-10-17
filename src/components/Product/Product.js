@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import AOS from 'aos'; // for scroll animations
 import 'aos/dist/aos.css';
 import { Link, NavLink } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+
 
 import { FaRobot, FaBookOpen, FaChalkboardTeacher, FaUserGraduate } from 'react-icons/fa'; // Icons for features
 
@@ -18,6 +20,9 @@ const Product = () => {
     <>
     <section className="relative bg-white dark:bg-gray-900 text-center pt-20 pb-5">
       {/* Parallax Background Image */}
+
+      
+
       <div
         className="absolute inset-0 bg-cover bg-center opacity-10 dark:opacity-20"
         style={{ backgroundImage: "url('/images/product.jpg')" }} // Replace with your background image
@@ -25,6 +30,25 @@ const Product = () => {
 
       <div className="relative z-10 pt-10 container mx-auto">
         {/* Header: Product Overview */}
+
+        <Helmet>
+        <title>TOTLE - AI-Powered Learning Product</title>
+        <script type="application/ld+json">
+          {`
+          {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "TOTLE - AI-Powered Learning",
+            "description": "TOTLE offers AI-powered personalized learning for students across a variety of subjects.",
+            "brand": {
+              "@type": "Organization",
+              "name": "TOTLE"
+            }
+          }
+          `}
+        </script>
+      </Helmet>
+
         <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-tangering to-orange-500 text-transparent bg-clip-text" data-aos="fade-up">
           TOTLE Product Overview
         </h1>

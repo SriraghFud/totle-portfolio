@@ -6,6 +6,8 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { FaRobot } from 'react-icons/fa6';
+import { Helmet } from 'react-helmet';
+
 
 const settings = {
   dots: true,
@@ -26,6 +28,12 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section with Background Image */}
+
+      <Helmet>
+        <title>TOTLE - Home</title>
+        <meta name="description" content="Welcome to TOTLE, the AI-powered personalized learning platform. Start your learning journey today!" />
+        <meta name="keywords" content="TOTLE, personalized learning, AI education, online learning" />
+      </Helmet>
       <section className="hero-bg bg-cover bg-center relative min-h-screen flex items-center justify-center parallax" style={{ backgroundImage: `url('/images/hero.jpg')` }}>
         <div className="overlay bg-black bg-opacity-50 absolute inset-0"></div>
         <div className="text-center relative z-10" data-aos="fade-up">
